@@ -1,0 +1,95 @@
+/* SIAM IT LABS - IMAGE DESIGN
+   Paste this code at the END of your existing style.css
+*/
+
+.image-section {
+    width: 100%;
+    margin: 35px 0;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.image-card {
+    overflow: hidden;
+    border-radius: 16px;
+    background: #101b2b;
+    border: 1px solid rgba(255,255,255,0.10);
+}
+
+.image-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.image-card:hover img {
+    transform: scale(1.05);
+}
+
+.image-card-content {
+    padding: 20px;
+    color: #ffffff;
+}
+
+.image-card-content h3 {
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+.image-card-content p {
+    color: #aab6c7;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* Hero Image */
+.hero-visual {
+    width: 100%;
+    margin-top: 35px;
+    overflow: hidden;
+    border-radius: 20px;
+    background: #101b2b;
+}
+
+.hero-visual img {
+    width: 100%;
+    height: 420px;
+    display: block;
+    object-fit: cover;
+}
+
+/* Portfolio Images */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.portfolio-grid img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .image-grid,
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-visual img {
+        height: 250px;
+    }
+
+    .image-card img {
+        height: 220px;
+    }
+}
